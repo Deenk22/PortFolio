@@ -1,11 +1,14 @@
+// import Home from "./view/Home/Home";
 import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
-      <h1 className="text-2xl text-center text-blue-400">
-        Hello world we ar working with tailwinds and react
-      </h1>
+      <Navbar />
+      {/* <h1 className="text-8xl font-principal">Santiago</h1>
+      <h1 className="text-4xl font-principal">Full Stack Web Developer</h1> */}
+      {/* <Home /> */}
     </>
   );
 }
