@@ -3,10 +3,15 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        principal: ["Quicksand"],
+      colors: {
+        "black-deenk": "#121212",
+        "white-section1": "#D9D8D5",
+        "black-font": "#333332",
+        "light-font": "#8D8D8C",
       },
-      palette: {},
+      fontFamily: {
+        main: ["Quicksand"],
+      },
       backgroundImage: {
         "open-menu": "url('./src/assets/svg/open-menu.svg')",
         "close-menu": "url('./src/assets/svg/close-menu.svg')",

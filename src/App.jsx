@@ -1,6 +1,6 @@
 // import Home from "./view/Home/Home";
-import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+import {AboutMe, Project, Music} from "./sections";
 
 function App() {
   return (
@@ -9,6 +9,9 @@ function App() {
       {/* <h1 className="text-8xl font-principal">Santiago</h1>
       <h1 className="text-4xl font-principal">Full Stack Web Developer</h1> */}
       {/* <Home /> */}
+      <AboutMe />
+      <Project />
+      <Music />
     </>
   );
 }
