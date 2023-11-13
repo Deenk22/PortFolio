@@ -18,6 +18,7 @@ export default {
       backgroundImage: {
         "open-menu": "url('./src/assets/svg/open-menu.svg')",
         "close-menu": "url('./src/assets/svg/close-menu.svg')",
+        "section-bg": "url('./src/assets/bg-section-dos.jpg')",
       },
     },
   },

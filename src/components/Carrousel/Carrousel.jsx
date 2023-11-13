@@ -8,7 +8,7 @@ import {RxArrowTopRight} from "react-icons/rx";
 
 export default function Carrousel() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-black-deenk">
+    <div className="flex flex-col items-center justify-center h-screen">
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-white-section1 text-5xl font-main">Projects</h1>
         <p className="text-white-section1 text-lg font-main mb-16">
@@ -50,13 +50,13 @@ export default function Carrousel() {
           clickable: true,
         }}
         modules={[FreeMode, Pagination]}
-        className="max-w-[90%] lg:max-w-[76%]"
+        className="max-w-[90%] lg:max-w-[78%]"
       >
         {ServiceData.map((item) => (
           <SwiperSlide key={item.title}>
-            <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white-section1 rounded-xl px-6 py-8 h-[256px] w-[248px] md:h-[304px] md:w-[216px] lg:h-[512px] lg:w-[352px] cursor-pointer">
+            <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white-section1 rounded-xl px-6 py-8 h-[256px] w-[248px] md:h-[304px] md:w-[216px] lg:h-[448px] lg:w-[352px] cursor-pointer">
               <div
-                className="absolute inset-0 bg-cover bg-center"
+                className="absolute inset-0 bg-cover bg-center rounded-md"
                 style={{backgroundImage: `url(${item.backgroundImage})`}}
               />
               <div className="absolute inset-0 bg-black-deenk opacity-40 group-hover:opacity-80" />
