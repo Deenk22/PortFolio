@@ -1,10 +1,10 @@
-import {Swiper, SwiperSlide} from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import {FreeMode, Pagination} from "swiper/modules";
-import {ServiceData} from "../../constants";
-import {RxArrowTopRight} from "react-icons/rx";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { FreeMode, Pagination } from 'swiper/modules';
+import { ServiceData } from '../../constants';
+import { RxArrowTopRight } from 'react-icons/rx';
 
 export default function Carrousel() {
   return (
@@ -12,7 +12,7 @@ export default function Carrousel() {
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-white-section1 text-5xl font-main">Projects</h1>
         <p className="text-white-section1 text-lg font-main mb-16">
-          Find Your{" "}
+          Find Your{' '}
           <span className="text-hover-font text-xl">Favorite Projects</span>
         </p>
       </div>
@@ -50,14 +50,14 @@ export default function Carrousel() {
           clickable: true,
         }}
         modules={[FreeMode, Pagination]}
-        className="max-w-[90%] lg:max-w-[78%]"
+        className="max-w-[90%] lg:max-w-[84%]"
       >
         {ServiceData.map((item) => (
           <SwiperSlide key={item.title}>
-            <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white-section1 rounded-xl px-6 py-8 h-[256px] w-[248px] md:h-[304px] md:w-[216px] lg:h-[448px] lg:w-[352px] cursor-pointer">
+            <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white-section1 rounded-xl px-6 py-8 h-[256px] w-[248px] md:h-[304px] md:w-[216px] lg:h-[436px] lg:w-[352px] cursor-pointer">
               <div
                 className="absolute inset-0 bg-cover bg-center rounded-md"
-                style={{backgroundImage: `url(${item.backgroundImage})`}}
+                style={{ backgroundImage: `url(${item.backgroundImage})` }}
               />
               <div className="absolute inset-0 bg-black-deenk opacity-40 group-hover:opacity-80" />
               <div className="relative flex flex-col gap-4">
@@ -70,7 +70,7 @@ export default function Carrousel() {
                 </p>
               </div>
               <RxArrowTopRight
-                size={"2em"}
+                size={'2em'}
                 className="absolute bottom-5 left-6 w-[35px] h-[35px]text-white group-hover:text-hover-font group-hover:rotate-45 duration-200"
               />
             </div>
