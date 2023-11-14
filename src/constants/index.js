@@ -10,25 +10,24 @@ export const icons = [
 ];
 
 import {
-  RxCrop,
   RxDesktop,
-  RxPencil2,
   RxReader,
   RxRocket,
   RxAccessibility,
+  RxArchive,
 } from "react-icons/rx";
 
 export const ServiceData = [
   {
-    icon: RxCrop,
+    icon: RxArchive,
     title: "IM Investing",
-    content: "Lorem ipsum dolor sit /amet, consectetur adipiscing elit.",
+    content: "Organise and have full control of your investments.",
     backgroundImage: "./src/assets/probando/01.png",
   },
   {
-    icon: RxPencil2,
+    icon: RxRocket,
     title: "Rick & Morty",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    content: "Characters from the legendary series Rick and Morty.",
     backgroundImage: "./src/assets/probando/01.png",
   },
   {
