@@ -4,10 +4,9 @@ export default function Project() {
   return (
     <section
       id="projects"
-      className="wrapper shadow-xl bg-section-bg bg-cover bg-center h-[100vh]"
+      className="wrapper shadow-xl bg-section-bg bg-cover bg-center"
     >
       <Carrousel />
-      <h1 className="text-8xl z-50">Hola</h1>
     </section>
   );
 }

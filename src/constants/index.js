@@ -17,41 +17,47 @@ import {
   RxArchive,
 } from "react-icons/rx";
 
-export const ServiceData = [
+export const projects = [
   {
     icon: RxArchive,
     title: "IM Investing",
     content: "Organise and have full control of your investments.",
     backgroundImage: "./src/assets/probando/01.png",
+    id: 0,
   },
   {
     icon: RxRocket,
     title: "Rick & Morty",
     content: "Characters from the legendary series Rick and Morty.",
     backgroundImage: "./src/assets/probando/01.png",
+    id: 1,
   },
   {
     icon: RxDesktop,
     title: "E-Commerce",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     backgroundImage: "./src/assets/probando/01.png",
+    id: 2,
   },
   {
     icon: RxReader,
     title: "Seo",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     backgroundImage: "./src/assets/probando/01.png",
+    id: 3,
   },
   {
     icon: RxAccessibility,
     title: "Management",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     backgroundImage: "./src/assets/probando/01.png",
+    id: 4,
   },
   {
     icon: RxRocket,
     title: "Production",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     backgroundImage: "./src/assets/probando/01.png",
+    id: 5,
   },
 ];

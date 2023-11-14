@@ -5,16 +5,24 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/effect-coverflow";
 import {Autoplay, EffectCoverflow, FreeMode, Pagination} from "swiper/modules";
-import {ServiceData} from "../../constants";
+import {projects} from "../../constants";
 import {RxArrowTopRight} from "react-icons/rx";
 import {useState} from "react";
 
 export default function Carrousel() {
   const [isActive, setIsActive] = useState(false);
+  // const [isChanging, setIsChanging] = useState(false);
 
-  const handleChangeColor = () => {
+  const toggleChangeColor = () => {
     setIsActive(!isActive);
   };
+
+  // const toggleSlideChange = (swiperCore) => {
+  //   const {activeIndex} = swiperCore;
+  //   setIsChanging(activeIndex);
+  // };
+
+  // console.log(isChanging);
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
@@ -25,10 +33,10 @@ export default function Carrousel() {
           <span className="text-hover-font text-xl">Favorite Projects</span>
         </p>
         <button
-          className="text-base text-neutral-500 font-main bg-black-font px-8 py-1 rounded-lg mt-4 shadow-xl"
-          onClick={handleChangeColor}
+          className="text-base text-neutral-400 font-main bg-black-font px-8 py-2 mb-1 rounded-tr-2xl mt-4 shadow-xl hover:bg-white-section1 hover:text-black-font duration-300"
+          onClick={toggleChangeColor}
         >
-          Play
+          {isActive ? "Black" : "White"}
         </button>
       </div>
 
@@ -38,10 +46,10 @@ export default function Carrousel() {
         slidesPerView={"auto"}
         effect={"coverflow"}
         coverflowEffect={{
-          rotate: 4,
+          rotate: 18,
           stretch: 0,
-          depth: 128,
-          modifier: 2.5,
+          depth: 270,
+          modifier: 2,
         }}
         grabCursor={true}
         breakpoints={{
@@ -70,25 +78,20 @@ export default function Carrousel() {
             spaceBetween: 88,
           },
         }}
-        // onSlideChange={() => console.log("Changing")}
+        // onSlideChange={toggleSlideChange}
+        // onSlideChange={(swiperCore) => {
+        //   const {activeIndex, snapIndex, previousIndex, realIndex} = swiperCore;
+        //   console.log({activeIndex, snapIndex, previousIndex, realIndex});
+        //   console.log(swiperCore);
+        // }}
         // onSwiper={(swiper) => console.log(swiper)}
         freeMode={true}
         autoplay={{delay: 3000}}
-        // pagination={{
-        //   clickable: true,
-        //   renderBullet: function (index, className) {
-        //     return `<button class="${className} bg-white-section1 w-6 h-1 rounded-full"></button>`;
-        //   },
-        // }}
         className="max-w-[90%] lg:max-w-[62%]"
       >
-        {ServiceData.map((item) => (
+        {projects.map((item) => (
           <SwiperSlide key={item.title}>
             <div className="flex flex-col mb-20 text-white-section1 rounded-xl px-6 py-8 h-[256px] w-[248px] md:h-[304px] md:w-[216px] lg:h-[384px] lg:w-[320px]">
-              {/* <div
-                className="absolute inset-0 bg-cover bg-center rounded-md"
-                style={{backgroundImage: `url(${item.backgroundImage})`}}
-              /> */}
               <div
                 className={
                   isActive
