@@ -18,8 +18,8 @@ export default function Carrousel() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <div className="flex flex-col justify-center items-center mt-4 mb-16">
+    <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col justify-center items-center mt-[16vh] mb-[4vh]">
         <h1 className="text-white-section1 text-5xl font-main">Projects</h1>
         <p className="text-white-section1 text-lg font-main">
           Find Your{" "}
@@ -29,7 +29,6 @@ export default function Carrousel() {
           {isActive ? "Black" : "White"}
         </button>
       </div>
-
       <Swiper
         modules={[FreeMode, Pagination, Autoplay, EffectCoverflow]}
         centeredSlides={true}
@@ -39,7 +38,7 @@ export default function Carrousel() {
         coverflowEffect={{
           rotate: 18,
           stretch: 0,
-          depth: 270,
+          depth: 256,
           modifier: 2,
         }}
         breakpoints={{
@@ -49,11 +48,11 @@ export default function Carrousel() {
           },
           640: {
             slidesPerView: 2,
-            spaceBetween: 32,
+            spaceBetween: 64,
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 64,
+            spaceBetween: 88,
           },
           1024: {
             slidesPerView: 2,
@@ -61,11 +60,11 @@ export default function Carrousel() {
           },
           1280: {
             slidesPerView: 2,
-            spaceBetween: 64,
+            spaceBetween: 128,
           },
           1536: {
             slidesPerView: 2,
-            spaceBetween: 88,
+            spaceBetween: 128,
           },
         }}
         freeMode={true}
@@ -109,6 +108,16 @@ export default function Carrousel() {
                   >
                     {item.content}
                   </p>
+                  <div className="flex flex-row items-center">
+                    {item.techStack?.map((tech, index) => (
+                      <img
+                        key={index}
+                        src={tech}
+                        width={48}
+                        alt={`tech-${index}`}
+                      />
+                    ))}
+                  </div>
                 </div>
                 <Link to={`projectdetails/${item.id}`}>
                   <RxArrowTopRight
