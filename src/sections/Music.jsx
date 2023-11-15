@@ -10,19 +10,19 @@ export default function Music() {
       </div>
       <div className="grid grid-cols-4 gap-2 mt-8">
         <div className="bg-white-section1 col-span-3 p-4 rounded-tl-3xl">
-          <h1 className="text-6xl font-main items-left">Arrival</h1>
+          <h1 className="text-6xl font-main items-left h-[8vh]"></h1>
         </div>
         <div className="bg-menu-ui bg-cover bg-bottom row-span-3 rounded-tr-3xl">
           <h1 className="text-8xl hidden">Demo02</h1>
         </div>
         <div className="bg-yellow-bee col-span-3 p-4">
-          <h1 className="text-6xl font-main">Puzzle Game</h1>
+          <h1 className="text-6xl font-main h-[8vh]"></h1>
         </div>
         <div className="col-span-3 bg-hover-font p-4">
-          <h1 className="text-6xl font-main">Sci-Fi Robot</h1>
+          <h1 className="text-6xl font-main h-[8vh]"></h1>
         </div>
         <div className="bg-white-section1 col-span-4 rounded-bl-3xl rounded-br-3xl p-4 h-[16vh]">
-          <h1 className="text-6xl font-main">Menu UI Cartoon</h1>
+          <h1 className="text-6xl font-main h-[12vh]"></h1>
         </div>
       </div>
       <div className="mt-16 flex justify-center">

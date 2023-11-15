@@ -1,12 +1,21 @@
-// import Home from "./view/Home/Home";
-import Navbar from "./components/Navbar/Navbar";
 import Home from "./view/Home/Home";
+import ProjectDetails from "./view/ProjectDetails/ProjectDetails";
+import Layout from "./components/Layout/Layout";
+import {Route, Routes, useLocation} from "react-router-dom";
+import {AnimatePresence} from "framer-motion";
 
 function App() {
+  const location = useLocation();
   return (
     <>
-      <Navbar />
-      <Home />
+      <AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+          <Route element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/projectdetails/:id" element={<ProjectDetails />} />
+          </Route>
+        </Routes>
+      </AnimatePresence>
     </>
   );
 }
