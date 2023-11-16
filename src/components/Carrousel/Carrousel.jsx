@@ -18,8 +18,8 @@ export default function Carrousel() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="flex flex-col justify-center items-center mt-[16vh] mb-[4vh]">
+    <div className="grid place-content-center">
+      <div className="flex flex-col justify-center items-center mt-[12vh] mb-6">
         <h1 className="text-white-section1 text-5xl font-main">Projects</h1>
         <p className="text-white-section1 text-lg font-main">
           Find Your{" "}
@@ -69,12 +69,12 @@ export default function Carrousel() {
         }}
         freeMode={true}
         autoplay={{delay: 3000}}
-        className="max-w-[90%] lg:max-w-[62%]"
+        className="max-w-[100%] lg:max-w-[56%]"
       >
         {projects.map((item) => {
           return (
             <SwiperSlide key={item.title}>
-              <div className="flex flex-col mb-20 text-white-section1 rounded-xl px-6 py-8 h-[256px] w-[248px] md:h-[304px] md:w-[216px] lg:h-[384px] lg:w-[320px]">
+              <div className="text-white-section1 px-4 py-6 xl:px-8 xl:py-8 h-[320px] w-[256px] md:h-[352px] md:w-[320px] lg:h-[352px] lg:w-[256px] transition-all">
                 <div
                   className={
                     isActive
@@ -93,8 +93,8 @@ export default function Carrousel() {
                   <h1
                     className={
                       isActive
-                        ? "text-xl lg:text-3xl font-main text-black-font"
-                        : "text-xl lg:text-3xl font-main text-white-section1"
+                        ? "text-lg md:text-3xl font-main text-black-font"
+                        : "text-lg md:text-3xl font-main text-white-section1"
                     }
                   >
                     <strong>{item.title}</strong>
@@ -102,29 +102,21 @@ export default function Carrousel() {
                   <p
                     className={
                       isActive
-                        ? "text-lg font-main text-black-deenk max-w-[50%] sm:max-w-[60%] md:max-w-[70%] lg:max-w-[80%] xl:max-w-[100%]"
-                        : "text-lg font-main text-white-section1 opacity-50 max-w-[50%] sm:max-w-[60%] md:max-w-[70%] lg:max-w-[80%] xl:max-w-[100%]"
+                        ? "text-base md:text-lg font-main text-black-deenk max-w-[50%] sm:max-w-[60%] md:max-w-[70%] lg:max-w-[80%]"
+                        : "text-base md:text-lg font-main text-white-section1 opacity-50 max-w-[50%] sm:max-w-[60%] md:max-w-[70%] lg:max-w-[80%] xl:max-w-[100%]"
                     }
                   >
                     {item.content}
                   </p>
-                  <div className="flex flex-row items-center">
-                    {item.techStack?.map((tech, index) => (
-                      <img
-                        key={index}
-                        src={tech}
-                        width={48}
-                        alt={`tech-${index}`}
-                      />
-                    ))}
-                  </div>
                 </div>
-                <Link to={`projectdetails/${item.id}`}>
-                  <RxArrowTopRight
-                    size={"2em"}
-                    className="absolute bottom-5 left-6 w-[35px] h-[35px] text-white-section1 opacity-50"
-                  />
-                </Link>
+                <div>
+                  <Link to={`projectdetails/${item.id}`}>
+                    <RxArrowTopRight
+                      size={"2em"}
+                      className="absolute bottom-5 left-3 xl:left-6 text-white-section1 opacity-50"
+                    />
+                  </Link>
+                </div>
               </div>
             </SwiperSlide>
           );
