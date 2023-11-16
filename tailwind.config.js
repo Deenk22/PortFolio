@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         main: ["Quicksand"],
+        rm: ["Permanent Marker"],
       },
       backgroundImage: {
         "open-menu": "url('./src/assets/svg/open-menu.svg')",

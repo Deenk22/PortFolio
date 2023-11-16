@@ -15,6 +15,6 @@ html {
     @apply bg-black-font hover:bg-hover-font p-2 rounded-md w-28 text-white-section1 ease-in-out duration-300 hover:shadow-xl;
   }
   .button {
-    @apply text-base text-neutral-400 font-main bg-black-font px-8 py-2 rounded-tr-2xl shadow-xl hover:bg-white-section1 hover:text-black-font duration-300
+    @apply text-base text-neutral-500 opacity-70 font-main bg-black-font px-8 py-2 rounded-tr-2xl shadow-xl hover:bg-white-section1 hover:text-black-font duration-300
   }
 }

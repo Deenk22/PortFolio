@@ -83,13 +83,15 @@ export default function Carrousel() {
                   }
                 />
                 <div className="relative flex flex-col gap-4">
-                  <item.icon
-                    className={
-                      isActive
-                        ? "text-black-font w-[32px] h-[32px]"
-                        : "text-white-section1 w-[32px] h-[32px]"
-                    }
-                  />
+                  <div>
+                    <item.icon
+                      className={
+                        isActive
+                          ? "text-black-font w-[32px] h-[32px]"
+                          : "text-white-section1 w-[32px] h-[32px]"
+                      }
+                    />
+                  </div>
                   <h1
                     className={
                       isActive
