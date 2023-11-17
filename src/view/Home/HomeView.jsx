@@ -1,4 +1,4 @@
-import {AboutMe, Project, Music} from "../../sections";
+import {AboutMe, Project, Music, TechStack} from "../../sections";
 
 export default function HomeView() {
   return (
@@ -6,6 +6,7 @@ export default function HomeView() {
       <AboutMe />
       <Project />
       <Music />
+      <TechStack />
     </>
   );
 }

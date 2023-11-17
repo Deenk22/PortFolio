@@ -11,14 +11,15 @@ export default {
         "light-purple-buttons": "#635462",
         "yellow-bee": "#9d814c",
         "hover-font": "#944c4e",
+        "js-yellow": "#f7df1e",
       },
       fontFamily: {
         main: ["Quicksand"],
-        rm: ["Permanent Marker"],
       },
       backgroundImage: {
         "open-menu": "url('./src/assets/svg/open-menu.svg')",
         "close-menu": "url('./src/assets/svg/close-menu.svg')",
+        "section-stack": "url('./src/assets/bg-section-tres.jpg')",
         "section-bg": "url('./src/assets/bg-section-dos.jpg')",
         "arrival-photo": "url('./src/assets/ATE-img/arrival.jpg')",
         "puzzle-game": "url('./src/assets/ATE-img/puzzlegame.png')",

@@ -12,8 +12,13 @@ export default function Music() {
         <div className="bg-white-section1 col-span-3 p-4 rounded-tl-3xl">
           <h1 className="text-6xl font-main items-left h-[8vh]"></h1>
         </div>
-        <div className="bg-menu-ui bg-cover bg-bottom row-span-3 rounded-tr-3xl">
-          <h1 className="text-8xl hidden">Demo02</h1>
+        <div className="bg-cover bg-bottom row-span-3 rounded-tr-3xl">
+          <video
+            className="h-full w-full object-cover rounded-2xl"
+            autoPlay
+            loop
+            src="./src/assets/video/AftertheEarth.mp4"
+          />
         </div>
         <div className="bg-yellow-bee col-span-3 p-4">
           <h1 className="text-6xl font-main h-[8vh]"></h1>
@@ -25,13 +30,7 @@ export default function Music() {
           <h1 className="text-6xl font-main h-[12vh]"></h1>
         </div>
       </div>
-      <div className="mt-16 flex justify-center">
-        {/* <img
-          src="./src/assets/logo/ATE-logo.png"
-          width={256}
-          alt="Logo After the Earth"
-        /> */}
-      </div>
+      <div className="mt-16 flex justify-center"></div>
     </section>
   );
 }
