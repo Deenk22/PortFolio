@@ -20,7 +20,7 @@ export default function TechStack() {
           initial={{opacity: 0, y: 16}}
           animate={{opacity: 1, y: 0}}
           transition={{duration: 0.2, ease: "easeInOut"}}
-          className="flex flex-row justify-center items-center mt-16 gap-16"
+          className="flex flex-col md:flex-row justify-center items-center mt-4 md:mt-16 gap-4 md:gap-12"
         >
           {technologies.map((stack) => {
             const {title, src, width} = stack;
