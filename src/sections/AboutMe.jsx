@@ -1,4 +1,11 @@
+import CV from "../assets/SantiagoMuñozCV.pdf";
+import deenkImage from "../assets/deenk.jpg";
 import {motion} from "framer-motion";
+import {RxEnvelopeOpen} from "react-icons/rx";
+import {RxImage} from "react-icons/rx";
+import {RxLinkedinLogo} from "react-icons/rx";
+import {RxGithubLogo} from "react-icons/rx";
+import {ImYoutube} from "react-icons/im";
 
 export default function AboutMe() {
   return (
@@ -29,13 +36,47 @@ export default function AboutMe() {
             delectus illum pariatur porro? Possimus.
           </p>
         </div>
-        <div className="mt-6 mb-8 xl:mb-0 flex justify-center xl:justify-start gap-4">
-          <button type="button" className="button-hover">
-            Contact
-          </button>
-          <button type="button" className="button-hover">
-            CV
-          </button>
+        <div className="mt-6 xl:mb-0 flex justify-center xl:justify-start gap-4">
+          <a href="mailto: deenk.design.dev@gmail.com">
+            <button type="button" className="button-hover">
+              <RxEnvelopeOpen />
+              Contact
+            </button>
+          </a>
+          <a href={CV} download="CV-SantiagoMJ">
+            <button type="button" className="button-hover">
+              <RxImage />
+              CV
+            </button>
+          </a>
+        </div>
+        <div className="flex flex-row justify-left items-center gap-3 mt-6">
+          <a
+            href="https://www.linkedin.com/in/santiagomu%C3%B1oz/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <RxLinkedinLogo
+              size={"2rem"}
+              className="text-black-font hover:text-linkedIn-blue hover-icon-about"
+            />
+          </a>
+          <a href="https://github.com/Deenk22" target="_blank" rel="noreferrer">
+            <RxGithubLogo
+              size={"2rem"}
+              className="text-black-font hover:text-github-color hover-icon-about"
+            />
+          </a>
+          <a
+            href="https://www.youtube.com/@aftertheearth_/videos"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ImYoutube
+              size={"2.2rem"}
+              className="text-black-font hover:text-youtube-color hover-icon-about"
+            />
+          </a>
         </div>
       </motion.div>
       <div className="flex justify-end">
@@ -44,7 +85,7 @@ export default function AboutMe() {
           animate={{opacity: 1, y: 0}}
           transition={{duration: 0.5}}
           className="h-[60vh] xl:h-[100vh] mb-16 xl:mb-0"
-          src="./src/assets/deenk.jpg"
+          src={deenkImage}
           alt="Deenk"
         />
       </div>

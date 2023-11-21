@@ -5,13 +5,7 @@ export const navLinks = [
   {href: "tech-stack", label: "Tech Stack", id: "stack"},
 ];
 
-import {
-  RxDesktop,
-  RxReader,
-  RxRocket,
-  RxAccessibility,
-  RxArchive,
-} from "react-icons/rx";
+import {RxDesktop, RxReader, RxRocket, RxArchive} from "react-icons/rx";
 
 export const projects = [
   {
@@ -19,55 +13,36 @@ export const projects = [
     title: "IM Investing",
     content: "Organise and have full control of your investments",
     id: "0",
+    img: ["../src/assets/projects/im/IM05.png"],
   },
   {
     icon: RxRocket,
     title: "Rick & Morty",
     content: "Characters from the legendary series Rick and Morty",
     id: "1",
-    techStack: [
-      "../src/assets/icons/github.svg",
-      "../src/assets/icons/react.svg",
-    ],
   },
   {
     icon: RxDesktop,
     title: "E-Commerce",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    content: "Sound creation portal for video games, advertising and films",
     id: "2",
-    techStack: [
-      "./src/assets/icons/github.svg",
-      "./src/assets/icons/react.svg",
-    ],
   },
   {
     icon: RxReader,
-    title: "Seo",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    title: "Technical Interview",
+    content: "A real technical interview for a Spanish company",
     id: "3",
-    techStack: [
-      "./src/assets/icons/github.svg",
-      "./src/assets/icons/react.svg",
-    ],
   },
-  {
-    icon: RxAccessibility,
-    title: "Management",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    id: "4",
-    techStack: [
-      "./src/assets/icons/github.svg",
-      "./src/assets/icons/react.svg",
-    ],
-  },
-  {
-    icon: RxRocket,
-    title: "Production",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    id: "5",
-    techStack: [
-      "./src/assets/icons/github.svg",
-      "./src/assets/icons/react.svg",
-    ],
-  },
+  // {
+  //   icon: RxAccessibility,
+  //   title: "Management",
+  //   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  //   id: "4",
+  // },
+  // {
+  //   icon: RxRocket,
+  //   title: "Production",
+  //   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  //   id: "5",
+  // },
 ];
