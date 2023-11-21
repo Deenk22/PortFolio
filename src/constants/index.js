@@ -12,6 +12,8 @@ export const projects = [
     icon: RxArchive,
     title: "IM Investing",
     content: "Organise and have full control of your investments",
+    contentXl:
+      "Organise and have full control of your investments, Organise and have full control of your investments, Organise and have full control of your investments",
     id: "0",
     img: ["../src/assets/projects/im/IM05.png"],
   },
@@ -20,18 +22,21 @@ export const projects = [
     title: "Rick & Morty",
     content: "Characters from the legendary series Rick and Morty",
     id: "1",
+    img: ["../src/assets/projects/rick&morty/rm06.png"],
   },
   {
     icon: RxDesktop,
     title: "E-Commerce",
     content: "Sound creation portal for video games, advertising and films",
     id: "2",
+    img: ["../src/assets/projects/ec/ec02.png"],
   },
   {
     icon: RxReader,
     title: "Technical Interview",
     content: "A real technical interview for a Spanish company",
     id: "3",
+    img: ["../src/assets/projects/pt/pt01.png"],
   },
   // {
   //   icon: RxAccessibility,

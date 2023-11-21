@@ -1,11 +1,47 @@
 import CV from "../assets/SantiagoMuñozCV.pdf";
 import deenkImage from "../assets/deenk.jpg";
-import {motion} from "framer-motion";
-import {RxEnvelopeOpen} from "react-icons/rx";
-import {RxImage} from "react-icons/rx";
-import {RxLinkedinLogo} from "react-icons/rx";
-import {RxGithubLogo} from "react-icons/rx";
+import SocialMedia from "../components/SocialMedia/SocialMedia";
+import {
+  RxImage,
+  RxEnvelopeOpen,
+  RxLinkedinLogo,
+  RxGithubLogo,
+} from "react-icons/rx";
 import {ImYoutube} from "react-icons/im";
+import {motion} from "framer-motion";
+
+const socialMedia = [
+  {
+    title: "linkedIn",
+    href: "https://www.linkedin.com/in/santiagomu%C3%B1oz/",
+    icon: (
+      <RxLinkedinLogo
+        size={"2rem"}
+        className="text-black-font hover:text-linkedIn-blue hover-icon-about"
+      />
+    ),
+  },
+  {
+    title: "github",
+    href: "https://github.com/Deenk22",
+    icon: (
+      <RxGithubLogo
+        size={"2rem"}
+        className="text-black-font hover:text-github-color hover-icon-about"
+      />
+    ),
+  },
+  {
+    title: "youtube",
+    href: "https://www.youtube.com/@aftertheearth_/videos",
+    icon: (
+      <ImYoutube
+        size={"2.2rem"}
+        className="text-black-font hover:text-youtube-color hover-icon-about"
+      />
+    ),
+  },
+];
 
 export default function AboutMe() {
   return (
@@ -50,33 +86,15 @@ export default function AboutMe() {
             </button>
           </a>
         </div>
-        <div className="flex flex-row justify-left items-center gap-3 mt-6">
-          <a
-            href="https://www.linkedin.com/in/santiagomu%C3%B1oz/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <RxLinkedinLogo
-              size={"2rem"}
-              className="text-black-font hover:text-linkedIn-blue hover-icon-about"
-            />
-          </a>
-          <a href="https://github.com/Deenk22" target="_blank" rel="noreferrer">
-            <RxGithubLogo
-              size={"2rem"}
-              className="text-black-font hover:text-github-color hover-icon-about"
-            />
-          </a>
-          <a
-            href="https://www.youtube.com/@aftertheearth_/videos"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ImYoutube
-              size={"2.2rem"}
-              className="text-black-font hover:text-youtube-color hover-icon-about"
-            />
-          </a>
+        <div className="flex flex-row justify-center xl:justify-start items-center gap-3 mt-6">
+          {socialMedia.map((sm) => {
+            const {title, href, icon} = sm;
+            return (
+              <div key={title}>
+                <SocialMedia href={href} icon={icon} />
+              </div>
+            );
+          })}
         </div>
       </motion.div>
       <div className="flex justify-end">

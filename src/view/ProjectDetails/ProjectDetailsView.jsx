@@ -1,41 +1,46 @@
 import {motion} from "framer-motion";
-import {useNavigate} from "react-router-dom";
+import {useParams} from "react-router-dom";
+import {idColor} from "../../constants/colours";
 
-export default function ProjectDetailsView({project}) {
-  const {title, content, img} = project;
-  const navigate = useNavigate();
-
-  const goBack = () => {
-    navigate(-1);
-  };
+export default function ProjectDetailsView({project, goBack}) {
+  const {id} = useParams();
+  const {title, contentXl, img} = project;
+  const textColorClass = idColor[id] || "";
 
   return (
     <motion.section
       initial={{opacity: 0}}
       animate={{opacity: 1}}
-      transition={{duration: 0.8, ease: "easeInOut"}}
+      transition={{duration: 0.5, ease: "easeInOut"}}
       className="wrapper bg-black-deenk h-screen"
     >
-      <div className="flex flex-col justify-center gap-16 mt-32 lg:flex-row lg:justify-evenly lg:gap-8 lg:min-h-[100vh] lg:mt-0 items-center px-32">
-        <div className="">
-          <h1 className="font-main text-7xl text-black-font">{title}</h1>
-          <p className="font-main text-base text-black-font mt-4">{content}</p>
+      <div className="flex flex-col justify-left gap-8 mt-16 lg:flex-row lg:justify-evenly lg:gap-16 lg:mt-48 items-center px-4">
+        <div className="w-[100%] lg:w-[80%]">
+          <h1
+            className={`font-main text-6xl sm:text-7xl font-semibold mr-4 ${textColorClass}`}
+          >
+            {title}
+          </h1>
+          <p className="font-main text-base text-white-section1 mt-3">
+            {contentXl}
+          </p>
+          <button className="button mt-4" onClick={goBack} type="button">
+            Back
+          </button>
         </div>
-        <div className="flex flex-row justify-end">
-          <picture>
-            {/* <source srcSet={img} /> */}
-            <img
-              src={img}
-              alt={title}
-              className="min-w-[352px] max-w-[912px] rounded-xl shadow-xl hover:shadow-black-deenk transition duration-200"
-            />
-          </picture>
-        </div>
-      </div>
-      <div className="mt-12 text-center">
-        <button className="button" onClick={goBack} type="button">
-          Go Back
-        </button>
+        <motion.div
+          initial={{x: 128}}
+          animate={{x: 0}}
+          transition={{duration: 0.4, ease: "easeInOut"}}
+          className="flex flex-row justify-end"
+        >
+          <img
+            width={"100%"}
+            src={img}
+            alt={title}
+            className="rounded-xl transition duration-200"
+          />
+        </motion.div>
       </div>
     </motion.section>
   );
