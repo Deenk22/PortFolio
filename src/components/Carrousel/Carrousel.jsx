@@ -1,10 +1,8 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/effect-coverflow";
-import {Autoplay, EffectCoverflow, FreeMode, Pagination} from "swiper/modules";
+import {Autoplay, EffectCoverflow, FreeMode} from "swiper/modules";
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {projects} from "../../constants";
@@ -30,11 +28,11 @@ export default function Carrousel() {
         </button>
       </div>
       <Swiper
-        modules={[FreeMode, Pagination, Autoplay, EffectCoverflow]}
+        modules={[FreeMode, Autoplay, EffectCoverflow]}
+        grabCursor={true}
+        effect={"coverflow"}
         centeredSlides={true}
         slidesPerView={"auto"}
-        effect={"coverflow"}
-        grabCursor={true}
         coverflowEffect={{
           rotate: 16,
           stretch: 0,
@@ -95,8 +93,8 @@ export default function Carrousel() {
                   <h1
                     className={
                       isActive
-                        ? "text-lg md:text-3xl font-main text-black-font"
-                        : "text-lg md:text-3xl font-main text-white-section1"
+                        ? "text-xl md:text-2xl xl:text-3xl font-main text-black-font"
+                        : "text-xl md:text-2xl xl:text-3xl font-main text-white-section1"
                     }
                   >
                     <strong>{item.title}</strong>
@@ -115,8 +113,11 @@ export default function Carrousel() {
                   <Link to={`projectdetails/${item.id}`}>
                     <RxArrowTopRight
                       size={"2em"}
-                      className="absolute bottom-5 left-3 xl:left-6 text-white-section1 opacity-50"
+                      className="absolute bottom-10 left-3 xl:left-6 text-white-section1 opacity-90"
                     />
+                    <p className="absolute bottom-5 left-3 xl:left-6 text-white-section1 opacity-50">
+                      View
+                    </p>
                   </Link>
                 </div>
               </div>

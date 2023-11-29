@@ -17,14 +17,14 @@ export default function ProjectDetailsView({project, goBack}) {
       transition={{duration: 0.8, ease: "easeInOut"}}
       className="wrapper h-screen"
     >
-      <div className="flex flex-col xl:flex-row justify-evenly items-center gap-8 mt-8 xl:mt-48">
+      <div className="flex flex-col xl:flex-row justify-evenly items-center gap-8 mt-32 xl:mt-40">
         <div className=" flex flex-col item-start">
           <h1
-            className={`font-main text-6xl sm:text-7xl font-semibold mr-4 ${textColorClass}`}
+            className={`font-main text-6xl sm:text-7xl font-semibold ${textColorClass}`}
           >
             {title}
           </h1>
-          <p className="font-main text-base text-white-section1 w-[70%] mt-4">
+          <p className="font-main text-base text-white-section1 w-[70%] mt-2">
             {content}
           </p>
           <button className="button mt-6 w-32" onClick={goBack} type="button">

@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -33,6 +34,7 @@ export default {
       backgroundImage: {
         "open-menu": "url('./src/assets/svg/open-menu.svg')",
         "close-menu": "url('./src/assets/svg/close-menu.svg')",
+        "dark-mode": "url('./src/assets/svg/bg-hover-darkmode.svg')",
         "section-stack": "url('./src/assets/bg-section-tres.jpg')",
         "section-bg": "url('./src/assets/bg-section-dos.jpg')",
         "project-01": "url('./src/assets/projects/rick&morty/rm01.png')",

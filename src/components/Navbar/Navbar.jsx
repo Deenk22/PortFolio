@@ -1,5 +1,6 @@
 import {navLinks} from "../../constants";
 import {motion} from "framer-motion";
+import Theme from "../Theme/Theme";
 
 export default function Navbar() {
   return (
@@ -14,7 +15,7 @@ export default function Navbar() {
           initial={{opacity: 0, x: 32}}
           animate={{opacity: 1, x: 0}}
           transition={{duration: 0.5, ease: "easeInOut"}}
-          className="absolute inset-y-0 p-8 bg-black-deenk w-[80%] m-auto rounded-2xl md:rounded-none md:rounded-tr-lg h-max text-center grid gap-4 md:w-max md:bg-black-deenk/30 md:p-4 md:grid-flow-col md:static backdrop-blur-lg backdrop-opacity-100 shadow-lg"
+          className="absolute inset-y-0 p-8 bg-black-deenk w-[80%] m-auto rounded-2xl md:rounded-none md:rounded-tr-lg h-max text-center grid gap-4 md:w-max md:bg-black-deenk/30 md:p-4 md:grid-flow-col md:static backdrop-blur-lg backdrop-opacity-100"
         >
           {navLinks.map((link) => (
             <li key={link.id}>
@@ -26,6 +27,7 @@ export default function Navbar() {
               </a>
             </li>
           ))}
+          <Theme />
         </motion.ul>
       </div>
     </nav>
