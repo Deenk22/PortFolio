@@ -2,7 +2,7 @@ import {useRef, useState} from "react";
 import {IoIosPlay} from "react-icons/io";
 import {IoPauseSharp} from "react-icons/io5";
 
-export default function AudioDemo() {
+export default function AudioDemo({t}) {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(new Audio("./src/assets/audio/dinosaur.ogg"));
 
@@ -20,10 +20,10 @@ export default function AudioDemo() {
     <div className="flex flex-row justify-center items-center gap-4">
       <div className="flex flex-col item-start">
         <p className="font-main dark:text-white-section1 text-black-font font-semibold">
-          Do you want to be a big Monster?
+          {t("preguntaMonster")}
         </p>
         <p className="font-main text-sm dark:text-white-section1 text-black-font dark:opacity-40">
-          Use headphones
+          {t("audífonos")}
         </p>
       </div>
       <button

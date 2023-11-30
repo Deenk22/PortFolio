@@ -11,6 +11,7 @@ const projects = [
   {
     // icon: RxArchive,
     title: "IM Investing",
+    translate: "IM",
     content: "Organise and have full control of your investments.",
     id: "0",
     img: [
@@ -25,6 +26,7 @@ const projects = [
   {
     // icon: RxRocket,
     title: "Rick & Morty",
+    translate: "RM",
     content: "Characters from the legendary series Rick and Morty.",
     id: "1",
     img: [
@@ -40,6 +42,7 @@ const projects = [
   {
     // icon: RxDesktop,
     title: "E-Commerce",
+    translate: "EC",
     content: "Sound creation portal for video games, advertising and films.",
     id: "2",
     img: [
@@ -53,6 +56,7 @@ const projects = [
   {
     // icon: RxReader,
     title: "Technical Intv.",
+    translate: "TI",
     content: "A real technical interview for a Spanish company.",
     id: "3",
     img: [

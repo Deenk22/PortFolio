@@ -1,9 +1,11 @@
+import {useTranslation} from "react-i18next";
 import AudioDemo from "../components/AudioDemo/AudioDemo";
 import AudioDemoArrival from "../components/AudioDemo/AudioDemoArrival";
 import CreaturesAmbient from "../components/AudioDemo/CreaturesAmbient";
 import {imageCard} from "../constants/imageCards";
 
 export default function Music() {
+  const {t} = useTranslation(["sectionMusic"]);
   return (
     <section
       id="music"
@@ -15,12 +17,10 @@ export default function Music() {
         </h1>
 
         <p className="font-main text-black-font dark:text-white-section1 md:w-[38%]">
-          <strong className="text-darkgray-pt dark:text-hover-font text-xl">
-            Sound design
+          <strong className="text-darkgray-pt dark:text-hover-font text-xl mr-1">
+            {t("soundDesign")}
           </strong>{" "}
-          is the art and practice of creating soundtracks for a variety of
-          needs. It involves specifying, acquiring or creating auditory elements
-          using audio production techniques and tools.
+          {t("descripción")}
         </p>
       </div>
       <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mb-16 px-4">
@@ -44,13 +44,13 @@ export default function Music() {
       </div>
       <div className="flex flex-col gap-8 lg:flex-row lg:gap-0 justify-evenly items-center mb-16 p-8">
         <div>
-          <AudioDemo />
+          <AudioDemo t={t} />
         </div>
         <div>
-          <AudioDemoArrival />
+          <AudioDemoArrival t={t} />
         </div>
       </div>
-      <CreaturesAmbient />
+      <CreaturesAmbient t={t} />
     </section>
   );
 }

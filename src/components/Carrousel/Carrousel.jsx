@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 import {projects} from "../../constants";
 import {RxArrowTopRight} from "react-icons/rx";
 
-export default function Carrousel() {
+export default function Carrousel({t, translation}) {
   const [isActive, setIsActive] = useState(false);
 
   const toggleChangeColor = () => {
@@ -18,13 +18,15 @@ export default function Carrousel() {
   return (
     <div className="flex flex-col lg:flex-row lg:justify-evenly items-center mt-32 lg:mt-0">
       <div className="flex flex-col items-left mb-6 lg:mb-0">
-        <h1 className="text-white-section1 text-5xl font-main">Projects</h1>
+        <h1 className="text-white-section1 text-5xl font-main">
+          {t("título")}
+        </h1>
         <p className="text-white-section1 text-lg font-main">
-          Find Your{" "}
-          <span className="text-hover-font text-xl">Favorite Projects</span>
+          {t("título2Part1")}{" "}
+          <span className="text-hover-font text-xl">{t("título2Part2")}</span>
         </p>
         <button className="button" onClick={toggleChangeColor}>
-          {isActive ? "Black" : "White"}
+          {isActive ? t("negro") : t("blanco")}
         </button>
       </div>
       <Swiper
@@ -70,6 +72,7 @@ export default function Carrousel() {
         className="max-w-[96%] lg:max-w-[56%] lg:h-screen lg:py-40 mx-0"
       >
         {projects.map((item) => {
+          console.log(projects);
           return (
             <SwiperSlide key={item.title}>
               <div className="text-white-section1 px-4 py-6 xl:px-6 xl:py-6 h-[320px] w-[256px] md:h-[352px] md:w-[320px] lg:h-[352px] lg:w-[256px] transition-all">
@@ -106,7 +109,7 @@ export default function Carrousel() {
                         : "text-base md:text-lg font-main text-white-section1 opacity-50 max-w-[50%] sm:max-w-[60%] md:max-w-[70%] lg:max-w-[80%] xl:max-w-[100%]"
                     }
                   >
-                    {item.content}
+                    {translation(item.translate)}
                   </p>
                 </div>
                 <div>
@@ -116,7 +119,7 @@ export default function Carrousel() {
                       className="absolute bottom-10 left-3 xl:left-6 text-white-section1 opacity-90"
                     />
                     <p className="absolute bottom-5 left-3 xl:left-6 text-white-section1 opacity-50">
-                      View
+                      {t("goTo")}
                     </p>
                   </Link>
                 </div>

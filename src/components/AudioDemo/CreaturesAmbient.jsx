@@ -2,7 +2,7 @@ import {useRef, useState} from "react";
 import {GiRaiseZombie} from "react-icons/gi";
 import {GiShamblingZombie} from "react-icons/gi";
 
-export default function CreaturesAmbient() {
+export default function CreaturesAmbient({t}) {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(
     new Audio("./src/assets/audio/creatures-ambient.ogg")
@@ -20,7 +20,7 @@ export default function CreaturesAmbient() {
   return (
     <div className="flex justify-end items-center gap-3 mr-2 mb-2">
       <p className="font-main text-sm text-black-font dark:text-white-section1">
-        {isPlaying ? "Turn Off The Light" : "Raise Me From The Dead"}
+        {isPlaying ? t("mensajeZombie01") : t("mensajeZombie02")}
       </p>
       <button
         type="button"

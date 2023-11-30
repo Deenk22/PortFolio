@@ -1,8 +1,10 @@
 import {navLinks} from "../../constants";
 import {motion} from "framer-motion";
 import Theme from "../Theme/Theme";
+import {useTranslation} from "react-i18next";
 
 export default function Navbar() {
+  const {t} = useTranslation(["nav"]);
   return (
     <nav className="wrapper h-32 flex items-center sticky top-0 z-20">
       <input type="checkbox" id="navbar" className="peer hidden" />
@@ -24,7 +26,7 @@ export default function Navbar() {
                   className="text-white-section1 text-base font-main"
                   href={`#${link.id}`}
                 >
-                  {link.label}
+                  {t(link.label)}
                 </a>
               </li>
             );

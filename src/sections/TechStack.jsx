@@ -1,7 +1,9 @@
+import {useTranslation} from "react-i18next";
 import IconCard from "../components/IconCard/IconCard";
 import {technologies} from "../constants/technologies";
 
 export default function TechStack() {
+  const {t} = useTranslation(["sectionTech"]);
   return (
     <section
       id="stack"
@@ -9,13 +11,15 @@ export default function TechStack() {
     >
       <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center mt-32">
-          <h1 className="text-white-section1 text-5xl font-main">Tech Stack</h1>
+          <h1 className="text-white-section1 text-5xl font-main">
+            {t("título")}
+          </h1>
           <p className="text-white-section1 text-lg font-main">
-            Find Your{" "}
-            <span className="text-hover-font text-xl">Favorite Stack</span>
+            {t("mensaje01")}{" "}
+            <span className="text-hover-font text-xl">{t("mensaje02")}</span>
           </p>
         </div>
-        <div className="grid grid-cols-3 lg:grid-cols-7 gap-4 md:gap-12 justify-center items-center mt-4 md:mt-16">
+        <div className="grid grid-cols-3 lg:grid-cols-7 gap-4 md:gap-12 justify-center items-center mt-16 md:mt-16">
           {technologies.map((stack) => {
             const {title, src, width} = stack;
             return (

@@ -5,10 +5,13 @@ import {motion} from "framer-motion";
 import {idColor} from "../../constants/colours";
 import {RxGithubLogo} from "react-icons/rx";
 import {RiChatSmile3Fill} from "react-icons/ri";
+import {useTranslation} from "react-i18next";
 
 export default function ProjectDetailsView({project, goBack}) {
+  const {t} = useTranslation(["projectDetails"]);
+  const {t: translation} = useTranslation(["projects"]);
   const {id} = useParams();
-  const {title, content, img, colours, githubLink} = project;
+  const {title, translate, img, colours, githubLink} = project;
   const textColorClass = idColor[id] || "";
 
   return (
@@ -27,10 +30,10 @@ export default function ProjectDetailsView({project, goBack}) {
               {title}
             </h1>
             <p className="font-main text-base text-white-section1 w-[70%] mt-2">
-              {content}
+              {translation(translate)}
             </p>
             <button className="button mt-6 w-32" onClick={goBack} type="button">
-              Back
+              {t("botón")}
             </button>
             <div className="flex flex-row items-center gap-2 mt-6">
               <img
@@ -39,11 +42,11 @@ export default function ProjectDetailsView({project, goBack}) {
                 alt="Power Toys Icon"
               />
               <p className="font-main text-base text-white-section1">
-                Use{" "}
+                {t("usar")}{" "}
                 <strong className="bg-gradient-to-r from-blue-powert to-green-powert text-transparent bg-clip-text">
-                  Power Toys
+                  {t("powerToys")}
                 </strong>{" "}
-                to get the colours.
+                {t("conseguirColor")}
               </p>
               <RiChatSmile3Fill className="text-xl text-white-section1" />
             </div>
@@ -59,7 +62,7 @@ export default function ProjectDetailsView({project, goBack}) {
           </div>
           <div className="flex flex-row justify-start items-center gap-2 mt-6">
             <p className="font-main text-white-section1 text-sm">
-              GitHub Repository
+              {t("repositorio")}
             </p>
             <a href={githubLink} target="_blank" rel="noreferrer">
               <RxGithubLogo
