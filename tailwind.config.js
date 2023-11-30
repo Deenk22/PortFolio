@@ -27,6 +27,8 @@ export default {
         "purple-pt": "#7472a1",
         "darkgray-pt": "#333337",
         "black-pt": "#222222",
+        "blue-powert": "#1c9fe3",
+        "green-powert": "#5fd343",
       },
       fontFamily: {
         main: ["Quicksand"],
@@ -34,7 +36,8 @@ export default {
       backgroundImage: {
         "open-menu": "url('./src/assets/svg/open-menu.svg')",
         "close-menu": "url('./src/assets/svg/close-menu.svg')",
-        "dark-mode": "url('./src/assets/svg/bg-hover-darkmode.svg')",
+        "dark-mode": "url('./src/assets/svg/dark-mode-bg.svg')",
+        "light-mode": "url('./src/assets/svg/light-mode-bg.svg')",
         "section-stack": "url('./src/assets/bg-section-tres.jpg')",
         "section-bg": "url('./src/assets/bg-section-dos.jpg')",
         "project-01": "url('./src/assets/projects/rick&morty/rm01.png')",

@@ -1,6 +1,5 @@
 import IconCard from "../components/IconCard/IconCard";
 import {technologies} from "../constants/technologies";
-import {motion} from "framer-motion";
 
 export default function TechStack() {
   return (
@@ -8,7 +7,7 @@ export default function TechStack() {
       id="stack"
       className="wrapper shadow-xl bg-section-stack bg-cover bg-center h-screen"
     >
-      <div>
+      <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center mt-32">
           <h1 className="text-white-section1 text-5xl font-main">Tech Stack</h1>
           <p className="text-white-section1 text-lg font-main">
@@ -16,24 +15,19 @@ export default function TechStack() {
             <span className="text-hover-font text-xl">Favorite Stack</span>
           </p>
         </div>
-        <motion.div
-          initial={{opacity: 0, y: 16}}
-          animate={{opacity: 1, y: 0}}
-          transition={{duration: 0.2, ease: "easeInOut"}}
-          className="flex flex-col md:flex-row justify-center items-center mt-4 md:mt-16 gap-4 md:gap-12"
-        >
+        <div className="grid grid-cols-3 lg:grid-cols-7 gap-4 md:gap-12 justify-center items-center mt-4 md:mt-16">
           {technologies.map((stack) => {
             const {title, src, width} = stack;
             return (
               <div
                 key={title}
-                className="hover:rotate-12 hover:scale-105 transition-all"
+                className="hover:rotate-12 hover:scale-105 transition-all flex justify-center items-center"
               >
-                <IconCard src={src} width={width} />
+                <IconCard src={src} width={width} title={title} />
               </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

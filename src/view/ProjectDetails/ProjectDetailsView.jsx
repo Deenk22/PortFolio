@@ -4,6 +4,7 @@ import {useParams} from "react-router-dom";
 import {motion} from "framer-motion";
 import {idColor} from "../../constants/colours";
 import {RxGithubLogo} from "react-icons/rx";
+import {RiChatSmile3Fill} from "react-icons/ri";
 
 export default function ProjectDetailsView({project, goBack}) {
   const {id} = useParams();
@@ -15,21 +16,38 @@ export default function ProjectDetailsView({project, goBack}) {
       initial={{opacity: 0}}
       animate={{opacity: 1}}
       transition={{duration: 0.8, ease: "easeInOut"}}
-      className="wrapper h-screen"
+      className="wrapper"
     >
-      <div className="flex flex-col xl:flex-row justify-evenly items-center gap-8 mt-32 xl:mt-40">
+      <div className="flex flex-col xl:flex-row justify-evenly items-center gap-8 mt-32 xl:mt-48">
         <div className=" flex flex-col item-start">
-          <h1
-            className={`font-main text-6xl sm:text-7xl font-semibold ${textColorClass}`}
-          >
-            {title}
-          </h1>
-          <p className="font-main text-base text-white-section1 w-[70%] mt-2">
-            {content}
-          </p>
-          <button className="button mt-6 w-32" onClick={goBack} type="button">
-            Back
-          </button>
+          <div>
+            <h1
+              className={`font-main text-6xl sm:text-7xl font-semibold ${textColorClass}`}
+            >
+              {title}
+            </h1>
+            <p className="font-main text-base text-white-section1 w-[70%] mt-2">
+              {content}
+            </p>
+            <button className="button mt-6 w-32" onClick={goBack} type="button">
+              Back
+            </button>
+            <div className="flex flex-row items-center gap-2 mt-6">
+              <img
+                src="../src/assets/svg/PowerToys.svg"
+                width={24}
+                alt="Power Toys Icon"
+              />
+              <p className="font-main text-base text-white-section1">
+                Use{" "}
+                <strong className="bg-gradient-to-r from-blue-powert to-green-powert text-transparent bg-clip-text">
+                  Power Toys
+                </strong>{" "}
+                to get the colours.
+              </p>
+              <RiChatSmile3Fill className="text-xl text-white-section1" />
+            </div>
+          </div>
           <div className="flex flex-row gap-4 mt-6">
             {colours.map((color, index) => {
               return (
@@ -51,7 +69,7 @@ export default function ProjectDetailsView({project, goBack}) {
             </a>
           </div>
         </div>
-        <div className="w-[100%] md:w-[72%] xl:w-[64%]">
+        <div className="w-[100%] md:w-[72%] mb-8 xl:mb-0 xl:w-[64%]">
           <ProjectsCarrousel img={img} title={title} />
         </div>
       </div>

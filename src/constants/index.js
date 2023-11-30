@@ -5,13 +5,13 @@ export const navLinks = [
   {href: "tech-stack", label: "Tech Stack", id: "stack"},
 ];
 
-import {RxDesktop, RxReader, RxRocket, RxArchive} from "react-icons/rx";
+// import {RxDesktop, RxReader, RxRocket, RxArchive} from "react-icons/rx";
 
-export const projects = [
+const projects = [
   {
-    icon: RxArchive,
+    // icon: RxArchive,
     title: "IM Investing",
-    content: "Organise and have full control of your investments",
+    content: "Organise and have full control of your investments.",
     id: "0",
     img: [
       "../src/assets/projects/im/IM01.png",
@@ -23,9 +23,9 @@ export const projects = [
     githubLink: "https://github.com/Deenk22/Final_Project_Bootcamp_Front",
   },
   {
-    icon: RxRocket,
+    // icon: RxRocket,
     title: "Rick & Morty",
-    content: "Characters from the legendary series Rick and Morty",
+    content: "Characters from the legendary series Rick and Morty.",
     id: "1",
     img: [
       "../src/assets/projects/rick&morty/rm01.png",
@@ -38,9 +38,9 @@ export const projects = [
     githubLink: "https://github.com/Deenk22/The-Rick-And-Morty-API",
   },
   {
-    icon: RxDesktop,
+    // icon: RxDesktop,
     title: "E-Commerce",
-    content: "Sound creation portal for video games, advertising and films",
+    content: "Sound creation portal for video games, advertising and films.",
     id: "2",
     img: [
       "../src/assets/projects/ec/ec03.png",
@@ -51,9 +51,9 @@ export const projects = [
     githubLink: "https://github.com/Deenk22/React_E-commerce",
   },
   {
-    icon: RxReader,
+    // icon: RxReader,
     title: "Technical Intv.",
-    content: "A real technical interview for a Spanish company",
+    content: "A real technical interview for a Spanish company.",
     id: "3",
     img: [
       "../src/assets/projects/pt/pt01.png",
@@ -62,3 +62,5 @@ export const projects = [
     colours: ["bg-purple-pt", "bg-darkgray-pt", "bg-black-pt"],
   },
 ];
+
+export {projects};
