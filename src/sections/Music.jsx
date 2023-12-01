@@ -21,7 +21,7 @@ export default function Music() {
           {t("descripción")}
         </p>
       </div>
-      <div className="bg-black-font mb-24 opacity-50">
+      <div className="bg-black-font mb-24 opacity-80">
         <div className="flex flex-row justify-center items-center px-4 img-animations">
           {imageCard.map((img) => {
             const {title, src, link} = img;
@@ -31,7 +31,7 @@ export default function Music() {
                   <img
                     src={src}
                     alt={title}
-                    className="opacity-50 hover:opacity-100 duration-200 hover:shadow-xl w-[100%] md:w-[512px]"
+                    className="opacity-90 hover:opacity-100 duration-200 w-[100%] md:w-[512px]"
                   />
                 </a>
               </div>
@@ -45,7 +45,7 @@ export default function Music() {
           <span className="opacity-50">{t("consejo2")}</span>
         </h2>
       </div>
-      <div className="flex flex-col gap-8 lg:flex-row lg:gap-0 justify-evenly items-center mb-12 md:mb-16 md:p-8">
+      <div className="flex flex-col gap-8 lg:flex-row lg:gap-0 justify-evenly items-center mb-12 md:mb-16 md:p-8 px-4">
         <div className="border-2 border-black-font dark:border-black-font rounded-lg p-8">
           <AudioDemo t={t} />
         </div>
