@@ -17,5 +17,6 @@ i18next
       "sectionTech",
       "projects",
       "projectDetails",
+      "notifications",
     ],
   });

@@ -7,7 +7,8 @@ export default function Theme() {
     const storedTheme = localStorage.getItem("theme");
     return storedTheme
       ? storedTheme
-      : window.matchMedia("(prefers-color-scheme: dark)").matches
+      : // Interesantísimo!! prefers-color-scheme detecta el THEME que tenemos en nuestro sistema operativo, si este, es dark, la aplicación iniciará con el THEME dark, en caso contrario, iniciará con light.
+      window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"
       : "light";
   });
@@ -30,12 +31,12 @@ export default function Theme() {
       {theme === "dark" ? (
         <GiDelighted
           onClick={toggleChangeTheme}
-          className="text-3xl text-white-section1 relative -bottom-5 -ml-4 md:bottom-1 md:ml-2 transition duration-200 hover:text-hover-font flex justify-center"
+          className="text-3xl text-white-section1 relative -bottom-14 -ml-4 md:bottom-0.5 md:ml-2 transition duration-200 hover:text-hover-font flex justify-center cursor-pointer"
         />
       ) : (
         <CiLight
           onClick={toggleChangeTheme}
-          className="text-3xl text-white-section1 relative -bottom-5 -ml-4 md:bottom-0.5 md:ml-2 transition duration-200 hover:text-yellow-bee"
+          className="text-3xl text-white-section1 relative -bottom-14 -ml-4 md:bottom-0.5 md:ml-2 transition duration-200 hover:text-yellow-bee cursor-pointer"
         />
       )}
     </div>

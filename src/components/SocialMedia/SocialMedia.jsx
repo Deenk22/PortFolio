@@ -1,7 +1,15 @@
-export default function SocialMedia({href, icon}) {
+export default function SocialMedia({href, icon, title}) {
   return (
-    <a href={href} target="_blank" rel="noreferrer">
+    <a
+      className="flex flex-col justify-center items-center font-main text-sm"
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+    >
       {icon}
+      <span className="dark:text-white-section1 text-black-font mt-2">
+        {title}
+      </span>
     </a>
   );
 }

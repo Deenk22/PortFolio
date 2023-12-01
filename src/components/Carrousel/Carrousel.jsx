@@ -72,27 +72,17 @@ export default function Carrousel({t, translation}) {
         className="max-w-[96%] lg:max-w-[56%] lg:h-screen lg:py-40 mx-0"
       >
         {projects.map((item) => {
-          console.log(projects);
           return (
             <SwiperSlide key={item.title}>
-              <div className="text-white-section1 px-4 py-6 xl:px-6 xl:py-6 h-[320px] w-[256px] md:h-[352px] md:w-[320px] lg:h-[352px] lg:w-[256px] transition-all">
+              <div className="text-white-section1 responsive-px responsive-py h-[416px] w-[304px] sm:h-[352px] sm:w-[320px] md:h-[352px] md:w-[384px] lg:h-[352px] lg:w-[256px] xl:h-[250px] transition-all">
                 <div
                   className={
                     isActive
-                      ? "absolute inset-0 bg-white-section1 opacity-60 rounded-xl transition-all duration-300"
+                      ? "absolute inset-0 bg-white-section1 opacity-70 rounded-xl transition-all duration-300"
                       : "absolute inset-0 bg-black-deenk opacity-70 rounded-xl transition-all duration-300"
                   }
                 />
                 <div className="relative flex flex-col gap-4">
-                  {/* <div>
-                    <item.icon
-                      className={
-                        isActive
-                          ? "text-black-font w-[32px] h-[32px]"
-                          : "text-white-section1 w-[32px] h-[32px]"
-                      }
-                    />
-                  </div> */}
                   <h1
                     className={
                       isActive
@@ -115,10 +105,10 @@ export default function Carrousel({t, translation}) {
                 <div>
                   <Link to={`projectdetails/${item.id}`}>
                     <RxArrowTopRight
-                      size={"2em"}
-                      className="absolute bottom-10 left-3 xl:left-6 text-white-section1 opacity-90"
+                      fontSize={"2em"}
+                      className="absolute bottom-7 left-2 xl:left-4 text-white-section1 opacity-90"
                     />
-                    <p className="absolute bottom-5 left-3 xl:left-6 text-white-section1 opacity-50">
+                    <p className="absolute text-sm md:text-base bottom-2 left-3 xl:left-5 text-white-section1 opacity-80">
                       {t("goTo")}
                     </p>
                   </Link>

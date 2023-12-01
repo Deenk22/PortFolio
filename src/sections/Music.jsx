@@ -6,47 +6,50 @@ import {imageCard} from "../constants/imageCards";
 
 export default function Music() {
   const {t} = useTranslation(["sectionMusic"]);
+
   return (
-    <section
-      id="music"
-      className="wrapper bg-light-mode dark:bg-dark-mode dark:mt-8 dark:mb-8 dark:rounded-3xl"
-    >
-      <div className="flex flex-col md:flex-row justify-evenly items-center gap-4 p-8 mt-24 md:mt-24 md:mb-16">
-        <h1 className="font-main text-7xl text-black-font dark:text-white-section1 md:w-[38%] text-center">
+    <section id="music" className="wrapper bg-light-mode dark:bg-dark-mode">
+      <div className="flex flex-col md:flex-row justify-evenly items-center gap-4 p-8 mt-16 md:mt-24 md:mb-16">
+        <h1 className="font-main text-7xl text-black-font dark:text-white-section1 mb-8 md:mb-0 md:w-[38%] text-center">
           After The Earth
         </h1>
 
-        <p className="font-main text-black-font dark:text-white-section1 md:w-[38%]">
+        <p className="font-main text-black-font dark:text-white-section1 md:w-[38%] mb-8 md:mb-0">
           <strong className="text-darkgray-pt dark:text-hover-font text-xl mr-1">
             {t("soundDesign")}
           </strong>{" "}
           {t("descripción")}
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mb-16 px-4">
-        {imageCard.map((img) => {
-          const {title, src, link} = img;
-          return (
-            <div key={title}>
-              <a href={link} target="_blank" rel="noreferrer">
-                <img
-                  src={src}
-                  alt={title}
-                  className="rounded-xl opacity-50 hover:opacity-100 duration-200 hover:shadow-xl w-[512px]"
-                />
-              </a>
-              <p className="font-main text-sm text-black-font dark:text-white-section1 mt-2">
-                {title}
-              </p>
-            </div>
-          );
-        })}
+      <div className="bg-black-font mb-24 opacity-50">
+        <div className="flex flex-row justify-center items-center px-4 img-animations">
+          {imageCard.map((img) => {
+            const {title, src, link} = img;
+            return (
+              <div key={title}>
+                <a href={link} target="_blank" rel="noreferrer">
+                  <img
+                    src={src}
+                    alt={title}
+                    className="opacity-50 hover:opacity-100 duration-200 hover:shadow-xl w-[100%] md:w-[512px]"
+                  />
+                </a>
+              </div>
+            );
+          })}
+        </div>
       </div>
-      <div className="flex flex-col gap-8 lg:flex-row lg:gap-0 justify-evenly items-center mb-16 p-8">
-        <div>
+      <div className="flex flex-row justify-center items-center mb-12">
+        <h2 className="font-main text-4xl dark:text-white-section1 text-black-font text-center">
+          <strong>{t("consejo")} </strong>
+          <span className="opacity-50">{t("consejo2")}</span>
+        </h2>
+      </div>
+      <div className="flex flex-col gap-8 lg:flex-row lg:gap-0 justify-evenly items-center mb-12 md:mb-16 md:p-8">
+        <div className="border-2 border-black-font dark:border-black-font rounded-lg p-8">
           <AudioDemo t={t} />
         </div>
-        <div>
+        <div className="border-2 border-black-font dark:border-black-font rounded-lg p-8">
           <AudioDemoArrival t={t} />
         </div>
       </div>

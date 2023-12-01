@@ -7,17 +7,41 @@ html {
   background: #121212;
 }
 
+.img-animations {
+  animation: movement 32s linear infinite;
+}
+
+.img-animations:hover {
+  animation-play-state: paused;
+}
+
+@keyframes movement {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @layer components {
   .wrapper {
     @apply w-[90%] m-auto overflow-hidden max-w-screen-2xl;
   }
   .button-hover {
-    @apply flex flex-row justify-center items-center gap-2 bg-black-font hover:bg-hover-font py-2 rounded-md w-28 text-white-section1 duration-300 hover:shadow-xl;
+    @apply flex flex-row justify-center items-center gap-2 bg-black-font hover:bg-hover-font py-2 rounded-md w-28 text-white-section1 duration-300 hover:shadow-xl dark:bg-black-font dark:hover:bg-white-section1 dark:hover:text-black-font;
   }
   .button {
     @apply text-base text-neutral-500 opacity-70 font-main bg-black-font px-8 py-2 rounded-tr-2xl shadow-xl hover:bg-white-section1 hover:text-black-font duration-300
   }
   .hover-icon-about {
     @apply hover:scale-105 hover:rotate-6 duration-150
+  }
+  .responsive-px{
+    @apply px-3 sm:px-5 md:px-6 lg:px-4 xl:px-6
+  }
+  .responsive-py{
+    @apply py-4 sm:py-6 md:py-8 lg:py-8 xl:py-12
   }
 }

@@ -4,9 +4,7 @@ import {GiShamblingZombie} from "react-icons/gi";
 
 export default function CreaturesAmbient({t}) {
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(
-    new Audio("./src/assets/audio/creatures-ambient.ogg")
-  );
+  const audioRef = useRef(new Audio("./src/assets/audio/creaturesAmbient.ogg"));
 
   const handlePlaySound = () => {
     if (isPlaying) {
@@ -18,7 +16,7 @@ export default function CreaturesAmbient({t}) {
     setIsPlaying(!isPlaying);
   };
   return (
-    <div className="flex justify-end items-center gap-3 mr-2 mb-2">
+    <div className="flex justify-center md:justify-end items-center gap-3 md:mr-4 mb-8 md:mb-4 md:mt-32">
       <p className="font-main text-sm text-black-font dark:text-white-section1">
         {isPlaying ? t("mensajeZombie01") : t("mensajeZombie02")}
       </p>
@@ -29,9 +27,13 @@ export default function CreaturesAmbient({t}) {
         className="dark:bg-white-section1 bg-black-font rounded-full font-main text-sm text-white-section1 dark:text-black-font p-3"
       >
         {isPlaying ? (
-          <GiShamblingZombie fontSize={"1.3rem"} />
+          <p className="flex gap-2">
+            {t("buttonZombie2")} <GiShamblingZombie fontSize={"1.3rem"} />
+          </p>
         ) : (
-          <GiRaiseZombie fontSize={"1.3rem"} />
+          <p className="flex gap-2">
+            {t("buttonZombie")} <GiRaiseZombie fontSize={"1.3rem"} />
+          </p>
         )}
       </button>
     </div>

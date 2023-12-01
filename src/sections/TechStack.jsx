@@ -9,8 +9,8 @@ export default function TechStack() {
       id="stack"
       className="wrapper shadow-xl bg-section-stack bg-cover bg-center h-screen"
     >
-      <div className="flex flex-col justify-center items-center">
-        <div className="flex flex-col justify-center items-center mt-32">
+      <div className="flex flex-col justify-center items-center min-h-[100vh]">
+        <div className="flex flex-col justify-center items-center ">
           <h1 className="text-white-section1 text-5xl font-main">
             {t("título")}
           </h1>

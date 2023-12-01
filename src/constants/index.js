@@ -5,11 +5,8 @@ export const navLinks = [
   {href: "tech-stack", label: "Tech Stack", id: "stack"},
 ];
 
-// import {RxDesktop, RxReader, RxRocket, RxArchive} from "react-icons/rx";
-
 const projects = [
   {
-    // icon: RxArchive,
     title: "IM Investing",
     translate: "IM",
     content: "Organise and have full control of your investments.",
@@ -24,7 +21,6 @@ const projects = [
     githubLink: "https://github.com/Deenk22/Final_Project_Bootcamp_Front",
   },
   {
-    // icon: RxRocket,
     title: "Rick & Morty",
     translate: "RM",
     content: "Characters from the legendary series Rick and Morty.",
@@ -40,7 +36,6 @@ const projects = [
     githubLink: "https://github.com/Deenk22/The-Rick-And-Morty-API",
   },
   {
-    // icon: RxDesktop,
     title: "E-Commerce",
     translate: "EC",
     content: "Sound creation portal for video games, advertising and films.",
@@ -54,7 +49,6 @@ const projects = [
     githubLink: "https://github.com/Deenk22/React_E-commerce",
   },
   {
-    // icon: RxReader,
     title: "Technical Intv.",
     translate: "TI",
     content: "A real technical interview for a Spanish company.",
