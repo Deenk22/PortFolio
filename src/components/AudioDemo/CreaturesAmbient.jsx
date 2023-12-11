@@ -27,13 +27,13 @@ export default function CreaturesAmbient({t}) {
         className="dark:bg-white-section1 bg-black-font rounded-full font-main text-sm text-white-section1 dark:text-black-font p-3"
       >
         {isPlaying ? (
-          <p className="flex gap-2">
-            {t("buttonZombie2")} <GiShamblingZombie fontSize={"1.3rem"} />
-          </p>
+          <div className="flex gap-2">
+            {t("buttonZombie2")} <GiShamblingZombie className="text-xl" />
+          </div>
         ) : (
-          <p className="flex gap-2">
-            {t("buttonZombie")} <GiRaiseZombie fontSize={"1.3rem"} />
-          </p>
+          <div className="flex gap-2">
+            {t("buttonZombie")} <GiRaiseZombie className="text-xl" />
+          </div>
         )}
       </button>
     </div>

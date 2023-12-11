@@ -31,7 +31,7 @@ export default function Music() {
                   <img
                     src={src}
                     alt={title}
-                    className="opacity-90 hover:opacity-100 duration-200 w-[100%] md:w-[512px]"
+                    className="opacity-90 hover:opacity-100 duration-200 w-[512px] h-[100%]"
                   />
                 </a>
               </div>

@@ -7,7 +7,7 @@ export default function SocialMedia({href, icon, title}) {
       rel="noreferrer"
     >
       {icon}
-      <span className="dark:text-white-section1 text-black-font mt-2">
+      <span className="dark:text-white-section1  text-black-font mt-2">
         {title}
       </span>
     </a>

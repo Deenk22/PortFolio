@@ -12,30 +12,21 @@ const socialMedia = [
     title: "LinkedIn",
     href: "https://www.linkedin.com/in/santiagomu%C3%B1oz/",
     icon: (
-      <RxLinkedinLogo
-        fontSize={"2rem"}
-        className="text-black-font dark:text-white-section1 hover:text-linkedIn-blue hover-icon-about"
-      />
+      <RxLinkedinLogo className="text-black-font text-3xl dark:text-white-section1 hover:text-linkedIn-blue hover-icon-about" />
     ),
   },
   {
     title: "GitHub",
     href: "https://github.com/Deenk22",
     icon: (
-      <RxGithubLogo
-        fontSize={"2rem"}
-        className="text-black-font dark:text-white-section1 hover:text-github-color hover-icon-about"
-      />
+      <RxGithubLogo className="text-black-font text-3xl dark:text-white-section1 hover:text-github-color hover-icon-about" />
     ),
   },
   {
     title: "Youtube",
     href: "https://www.youtube.com/@aftertheearth_/videos",
     icon: (
-      <ImYoutube
-        fontSize={"2.2rem"}
-        className="text-black-font dark:text-white-section1 hover:text-youtube-color hover-icon-about"
-      />
+      <ImYoutube className="text-black-font text-[30px] dark:text-white-section1 hover:text-youtube-color hover-icon-about" />
     ),
   },
 ];
