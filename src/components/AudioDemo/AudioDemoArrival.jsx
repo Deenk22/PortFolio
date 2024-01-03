@@ -2,9 +2,7 @@ import {useRef, useState} from "react";
 
 export default function AudioDemoArrival({t}) {
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(
-    new Audio("./src/assets/audio/spacecraftlighting.ogg")
-  );
+  const audioRef = useRef(new Audio("/assets/audio/spacecraftlighting.ogg"));
 
   const handlePlaySound = () => {
     if (isPlaying) {

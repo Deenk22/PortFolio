@@ -4,7 +4,7 @@ import {GiShamblingZombie} from "react-icons/gi";
 
 export default function CreaturesAmbient({t}) {
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(new Audio("./src/assets/audio/creaturesAmbient.ogg"));
+  const audioRef = useRef(new Audio("src/assets/audio/creaturesAmbient.ogg"));
 
   const handlePlaySound = () => {
     if (isPlaying) {

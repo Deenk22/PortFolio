@@ -2,7 +2,7 @@ import {useRef, useState} from "react";
 
 export default function AudioDemo({t}) {
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(new Audio("./src/assets/audio/dinosaur.ogg"));
+  const audioRef = useRef(new Audio("/assets/audio/dinosaur.ogg"));
 
   const handlePlaySound = () => {
     if (isPlaying) {
