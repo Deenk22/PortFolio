@@ -37,7 +37,7 @@ export default function ProjectDetailsView({project, goBack}) {
             </button>
             <div className="flex flex-row items-center gap-2 mt-6">
               <img
-                src="../src/assets/svg/PowerToys.svg"
+                src="/assets/svg/PowerToys.svg"
                 width={24}
                 alt="Power Toys Icon"
               />
